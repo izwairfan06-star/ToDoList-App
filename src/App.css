@@ -1,0 +1,145 @@
+/* Clean, modern global reset */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+body {
+  background-color: #0f172a; /* Sleek, dark slate background */
+  color: #f8fafc;
+  padding: 40px 20px;
+}
+
+/* Container wrapper to keep layout centered and responsive */
+.Outerdiv {
+  width: 100%;
+  max-width: 650px; /* Snugger, more focused app container */
+  margin: 0 auto;
+}
+
+/* Style the App Title */
+h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 24px;
+  text-align: center; /* Poori screen ke center mein kar dega */
+  display: block;
+  width: 100%;
+  background: linear-gradient(to right, #38bdf8, #818cf8);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Modern Form layout using Flexbox */
+form {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 30px;
+}
+
+form input {
+  flex: 1;
+  padding: 14px 18px;
+  font-size: 16px;
+  background-color: #1e293b; /* Darker card input background */
+  border: 2px solid #334155;
+  border-radius: 12px;
+  color: #f8fafc;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+form input:focus {
+  border-color: #6366f1;
+  box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.2); /* Soft glowing ring */
+}
+
+form input::placeholder {
+  color: #64748b;
+}
+
+form button {
+  padding: 14px 28px;
+  font-size: 16px;
+  font-weight: 600;
+  background: linear-gradient(135deg, #6366f1, #4f46e5); /* Vibrant purple gradient */
+  color: white;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(79, 70, 229, 0.3);
+  transition: all 0.2s ease;
+}
+
+form button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(79, 70, 229, 0.4);
+}
+
+form button:active {
+  transform: translateY(1px);
+}
+
+/* List Styling */
+.Outerdiv ul {
+  list-style: none;
+}
+
+/* Modern list items */
+.Outerdiv ul li {
+  background-color: #1e293b;
+  color: #e2e8f0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 20px;
+  font-size: 16px;
+  margin-bottom: 12px;
+  border-radius: 12px;
+  border: 1px solid #334155;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease;
+}
+
+.Outerdiv ul li:hover {
+  border-color: #475569;
+  transform: scale(1.01);
+}
+
+/* Delete / Action button inside item */
+.Outerdiv ul li span {
+  cursor: pointer;
+  color: #64748b;
+  font-size: 14px;
+  background-color: #334155;
+  padding: 6px 12px;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+.Outerdiv ul li span:hover {
+  background-color: #ef4444;
+  color: white;
+}
+
+/* Completed Todo State */
+.completetodo {
+  text-decoration: line-through;
+  opacity: 0.4;
+  background-color: #0f172a !important; /* Blends back into screen */
+  border-color: transparent !important;
+}
+
+/* Extra responsiveness for small mobile screens */
+@media (max-width: 480px) {
+  form {
+    flex-direction: column;
+  }
+  
+  form button {
+    width: 100%;
+  }
+}
